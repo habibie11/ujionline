@@ -1,66 +1,92 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# UjiOnline - Aplikasi Ujian Berbasis Web dengan Laravel
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**UjiOnline** adalah aplikasi berbasis web CBT yang dikembangkan menggunakan framework PHP populer yaitu **Laravel**. Aplikasi ini dibuat sebagai studi kasus dari kursus pengembangan website, dengan fokus pada sistem **ujian online (Computer Based Test)** yang dapat membantu guru atau manajer dalam mengevaluasi kemampuan siswa atau karyawan secara efisien.
 
-## About Laravel
+## 🎯 Tujuan Proyek
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Aplikasi CBT Online dikembangkan untuk mempermudah proses evaluasi dan ujian secara digital, baik dalam lingkungan pendidikan maupun korporasi. Tujuan utama dari aplikasi ini adalah:
+- Menyediakan platform ujian yang efisien, fleksibel, dan mudah diakses.
+- Memfasilitasi guru, dosen, atau manajer untuk membuat dan mengelola soal serta jadwal ujian secara digital.
+- Memberikan pengalaman ujian yang interaktif dan real-time untuk siswa atau karyawan.
+- Mengurangi ketergantungan terhadap ujian berbasis kertas serta meminimalisir kecurangan.
+- Menjadi fondasi awal untuk dikembangkan menjadi sistem CBT yang lebih kompleks dan dapat digunakan secara luas di masa depan.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🧩 Fitur Utama
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- 🔐 **Role-Based Access Control (RBAC):**
+  - **Teacher / Manager**: 
+    - Membuat dan mengelola soal
+    - Menjadwalkan ujian
+    - Melihat hasil ujian
+  - **Student / Karyawan**: 
+    - Mengikuti ujian yang diberikan
+    - Melihat hasil ujian pribadi
 
-## Learning Laravel
+- 📝 **Manajemen Ujian dan Soal:**
+  - Dukungan soal pilihan ganda dan esai
+  - Evaluasi hasil otomatis
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- ⚙️ **User Experience Terjaga:**
+  - Akses ke fitur dibatasi sesuai peran pengguna
+  - Tampilan antarmuka yang ramah pengguna
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## ⚙️ Teknologi yang Digunakan
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Laravel** (PHP Framework)
+- **Blade Templating Engine**
+- **MySQL** (Database)
+- **Tailwind CSS** (untuk antarmuka)
+- **Authentication dan Middleware Laravel**
 
-## Laravel Sponsors
+## 🚀 Cara Instalasi
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+1. **Clone repository:**
+   ```bash
+   git clone https://github.com/habibie11/ujionline.git
+   cd ujionline
+   ```
 
-### Premium Partners
+2. **Install dependency Laravel:**
+   ```bash
+   composer install
+   ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+3. **Salin file konfigurasi dan buat kunci aplikasi:**
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
 
-## Contributing
+4. **Atur koneksi database pada file `.env`, kemudian migrasi database:**
+   ```bash
+   php artisan migrate
+   ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+5. **Jalankan server lokal Laravel:**
+   ```bash
+   php artisan serve
+   ```
 
-## Code of Conduct
+6. **Akses di browser:**
+   ```
+   http://localhost:8000
+   ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 👨‍💻 Pengembang
 
-## Security Vulnerabilities
+Proyek ini dikembangkan oleh Habibie sebagai bagian dari proses belajar Laravel dan membangun aplikasi web yang scalable dan mudah dikembangkan bersama tim.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🤝 Kontribusi
 
-## License
+Kontribusi sangat terbuka! Jika kamu memiliki ide, perbaikan bug, atau ingin menambahkan fitur baru:
+1. Fork repository ini
+2. Buat branch baru untuk fitur atau perbaikanmu
+3. Ajukan pull request
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 📷 Screenshot
+
+_Tambahkan screenshot antarmuka aplikasi di sini jika ada_
+
+---
+
+> Terima kasih telah melihat proyek ini. Silakan beri ⭐️ jika kamu suka dan ingin mendukung pengembangannya!
